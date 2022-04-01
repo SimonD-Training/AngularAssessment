@@ -1,0 +1,7 @@
+<div *ngFor="let article of Articles">
+    <h2>{{article.title}}</h2>
+    <h3>{{article.author + "-" + article.date}}</h3>
+    <p *ngFor="let paragraph of article.body.split('\n')">
+        {{paragraph}} <br> <br>
+    </p>
+</div>

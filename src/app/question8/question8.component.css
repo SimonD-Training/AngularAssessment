@@ -1,0 +1,20 @@
+form {
+    display: flex;
+    flex-direction: column;
+    color: blue;
+    width: max-content;
+}
+
+form>label {
+    display: flex;
+}
+
+form>label>div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+form input[type="email"] {
+    flex-grow: 1;
+}

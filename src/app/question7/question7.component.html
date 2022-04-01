@@ -1,0 +1,127 @@
+<form #form="ngForm"
+    [style]="{display: 'flex','flex-direction': 'column',
+    background: 'rgb(230, 230, 230)',border: '1px solid hsl(0, 0%, 66%)',
+    'border-radius': '5px',width: '300px',padding: '10px',
+    'font-size': '14px','font-weight': '500'}">
+    <div [style]="{display: 'flex', 'justify-content': 'space-between'}">
+        <label [style]="{display: 'inherit', 'align-items': 'center'}"><input type="radio" value="return" name="rad1"
+                ngModel>Return</label>
+        <label [style]="{display: 'inherit', 'align-items': 'center'}"><input type="radio" value="oneway" name="rad1"
+                ngModel>One Way</label>
+        <label [style]="{display: 'inherit', 'align-items': 'center'}"><input type="radio" value="multi" name="rad1"
+                ngModel>Multi-City</label>
+    </div> <br>
+    <div [style]="{display: 'flex'}">
+        <label [style]="{display: 'inherit'}"><span [style]="{'min-width': '75px'}">From:</span><input type="text"
+                name="tex1" ngModel></label>
+    </div> <br>
+    <div [style]="{display: 'flex'}">
+        <label [style]="{display: 'inherit'}">
+            <span [style]="{'min-width': '75px'}">Depart:</span>
+            <input type="text" placeholder="yyyy-mm-dd" (change)="give($event, form, 'dat1')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M20 19h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm16-14v22h-24v-22h24zm-2 6h-20v14h20v-14zm-8 8h-4v4h4v-4zm-6-6h-4v4h4v-4z" />
+            </svg>
+            <input *ngIf="false" type="date" name="dat1" ngModel>
+        </label>
+    </div> <br>
+    <div [style]="{display: 'flex'}">
+        <label [style]="{display: 'inherit'}"><span [style]="{'min-width': '75px'}">To:</span><input type="text"
+                name="tex2" ngModel></label>
+    </div> <br>
+    <div [style]="{display: 'flex'}">
+        <label [style]="{display: 'inherit'}"><span [style]="{'min-width': '75px'}">Return:</span><input type="text"
+                placeholder="yyyy-mm-dd" (change)="give($event, form, 'dat2')"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M20 19h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm16-14v22h-24v-22h24zm-2 6h-20v14h20v-14zm-8 8h-4v4h4v-4zm-6-6h-4v4h4v-4z" />
+            </svg><input *ngIf="false" type="date" name="dat2" ngModel></label>
+    </div> <br>
+    <span [style]="{'min-width': '75px'}">
+        Number of Travellers
+    </span>
+    <div [style]="{display: 'flex'}">
+        <table [style]="{width: '100%'}">
+            <tr>
+                <td>Adults</td>
+                <td>Children</td>
+                <td>Infants</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="sel1">
+                        <option value="0">0</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">0</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="sel2">
+                        <option value="0">0</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">0</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="sel3">
+                        <option value="0">0</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div> <br>
+    <div [style]="{display: 'flex'}">
+        <label [style]="{display: 'inherit'}"><span [style]="{'min-width': '75px'}">Class:</span>
+            <select name="sel4">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="firstclass">First-Class</option>
+            </select>
+        </label>
+    </div> <br>
+    <div [style]="{display: 'flex'}">
+        <label [style]="{display: 'inherit'}"><span [style]="{'min-width': '75px'}">Airline:</span>
+            <select name="sel5">
+                <option value="nopref">No Preference</option>
+                <option value="delta">Delta Airlines</option>
+                <option value="jet">JetBlue</option>
+            </select>
+        </label>
+    </div> <br>
+    <div [style]="{display: 'flex'}">
+        <label [style]="{display: 'inherit'}"><span [style]="{'min-width': '75px'}">Coupon:</span><input type="text"
+                name="tex3" ngModel></label>
+    </div> <br> <br>
+    <input type="submit"
+        [style]="{background: '#900', color: 'white', border: 'none',
+         padding: '20px 0', 'font-weight': 'bold', 'font-size': '150%',
+         'border-radius': '10px', 'box-shadow': '0 0 5px black'}"
+        value="SEARCH" ngModel>
+</form>

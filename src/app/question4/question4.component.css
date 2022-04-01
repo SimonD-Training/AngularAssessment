@@ -1,0 +1,16 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+svg{
+    padding: 5px;
+}
+svg:hover {
+    cursor: pointer;
+    background: skyblue;
+    border-radius: 5px;
+}

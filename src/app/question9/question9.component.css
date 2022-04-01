@@ -1,0 +1,145 @@
+.smallicon {
+    width: 24px;
+    height: 24px;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding: 10px;
+    background: url("/assets/pexels-matthis-2305098.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    color: white;
+}
+
+header * {
+    z-index: 1;
+}
+
+header .glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: #0006;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 95px);
+}
+
+main hr {
+    width: 15%;
+    background: black;
+    border: 1px solid black;
+    margin: 15px 0;
+}
+
+main>nav {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: calc(100% - 40px);
+    padding: 20px;
+    background: rgb(235, 235, 235);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main>nav>main {
+    height: 80%;
+    overflow: hidden;
+    font-weight: 300;
+}
+
+main>section::-webkit-scrollbar{
+    display: none;
+}
+
+main>section {
+    display: flex;
+    align-items: center;
+    width: calc(calc(100% * 0.8) - 25px);
+    height: calc(100% - 50px);
+    background: linear-gradient(#730c0c, #3a0606);
+    overflow-x: scroll;
+    padding: 25px 0;
+    padding-left: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main>section>div{
+    position: relative;
+    left: 0px;
+    display: flex;
+    width: max-content;
+    height: max-content;
+}
+
+main>section>div>figure {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 450px;
+    background: white;
+    box-shadow: 3px 3px 10px black;
+    margin-right: 35px;
+}
+
+main>section>div>figure *{
+    padding: 10px;
+}
+
+main>section>div>figure>img{
+    width: 100%;
+    padding: 0;
+}
+
+main>section>div>figure>figcaption{
+    display: flex;
+    flex-direction: column;
+}
+
+main>section>div>figure span:nth-of-type(2) {
+    height: 130px;
+    overflow: hidden;
+}
+
+main>main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main>main>section {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 25px);
+}
+
+main>main>section:first-of-type {
+    height: 200px;
+    background: #f7f7f7;
+}
+
+main>main>section:last-of-type {
+    padding-right: 40px;
+    width: calc(100% - 65px);
+    background: #f7f7f7;
+    font-size: large;
+    font-weight: 500;
+    line-height: 200%;
+    flex-grow: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

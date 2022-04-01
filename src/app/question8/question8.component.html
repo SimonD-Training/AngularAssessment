@@ -1,0 +1,14 @@
+<form #form2="ngForm">
+    <h2>Sovereign Resort Hotel Booking Form</h2>
+    <hr width="90%">
+    <label><span>Name&numsp;<span style="color: red;" *ngIf="form2.controls['tex1']?.invalid || form2.controls['tex2']?.invalid">*</span></span>
+        <div><input type="text" name="tex1" required ngModel><span>First Name</span></div>
+        <div><input type="text" name="tex2" required ngModel><span>Last Name</span></div>
+    </label> <br>
+    <label><span>Email&numsp;<span style="color: red;" *ngIf="form2.controls['email1']?.invalid">*</span></span>
+        <input type="email" placeholder="ex: name@domain.ext" name="email1" email required ngModel>
+    </label> <br>
+    <label><span>Mobile Number&numsp;<span style="color: red;" *ngIf="form2.controls['tel1']?.invalid">*</span></span>
+        <input type="tel" name="tel1" email required ngModel>
+    </label>
+</form>

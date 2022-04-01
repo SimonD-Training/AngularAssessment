@@ -1,0 +1,6 @@
+<p>Type Input in the Input field</p>
+<form #form="ngForm">
+    <input type="text" name="One" pattern="^[A-Za-z]+$" ngModel>
+</form>
+<p>The input's valid state is:</p>
+<h2><b>{{form.controls['One'].valid}}</b></h2>
